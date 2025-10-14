@@ -1,6 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-  <body>
-    <p>hello world</p>
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JAYU 자유 CINEMA</title>
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: Calibri, sans-serif;
+				background-color: #F5E9DF;
+				color: #F5E9DF;
+				font-size: 1em;
+				/**background-image: url("website-background1.jpeg");
+				background-size: cover;
+				packground-position: center;
+				background-repeat: no-repeat;
+				background-attachment: fixed;**/
+			}
+			.title-text {
+				margin: 0 auto;
+				text-align: center;
+				font-size: 1em;
+			}
+			.programming {
+				margin: 50px auto 50px auto;
+				width: 400px;
+				background-color: #7D1A2F;
+				padding: 15px 20px 15px 20px;
+				/*border: inset #F03540 2px;*/
+				line-height: 1.6em;
+			}
+			.row {
+				display: grid;
+				grid-template-columns: 100px 1fr;
+				padding: 10px 0 0 0;
+			}
+			.subrow {
+				display: grid;
+				grid-template-columns: 100px 1fr;
+				padding: 0 0 10px 0;
+				border-bottom: solid #FF8080 1px;
+			}
+			.date {
+				text-align: left;
+				color: #F5E9DF;
+			}
+			.time {
+				text-align: left;
+				color: #FF8080;
+			}
+			.center {
+				text-align: left;
+				color: #F5E9DF;
+			}
+			.film-title {
+				text-align: left;
+				color: #F5E9DF;
+				font-weight: bold;
+			}
+			.director {
+				text-align: left;
+				color: #FF8080;
+			}
+			.line {
+				width: 100px;
+				margin: 30px auto 40px auto;
+				border-bottom: 2px #fff solid;
+				height: 1px;
+			}
+			.subtitle-text {
+				text-align: left;
+				font-size: 0.8em;
+				color: #F5E9DF;
+				width: 100%;
+				border-bottom: 2px #F5E9DF solid;
+				line-height: 0;
+				margin-bottom: 15px;
+			}
+			.insert {
+				width:100%;
+				margin: 15px 0 0 0;
+				padding: 0;
+				border: #FF8080 solid 2px;
+			}
+			.this-week {
+				text-align: center;
+				margin-bottom: 0;
+			}
+			.this-week p {
+				margin-top: 5px;
+				margin-bottom: 0;
+			}
+			.small {
+				font-size: 0.9em;
+			}
+			.movie-title-weekly {
+				font-style: oblique 20deg;
+			}
+			a {
+				color: #F5E9DF;
+				text-decoration: none;
+			}
+			a:hover {
+				color: #2BA18A;
+			}
+
+			@media (max-width: 768px) {
+				html, body {
+					overflow: visible;
+				}
+			}
+			@media (max-width: 568px) {
+				.programming {
+					width: 300px
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="programming">
+			<div class="subtitle-text">
+				<h2>JAYU 자유 CINEMA</h2>
+			</div>
+		<!--ROW 1-->
+			<div class="row">
+				<div class="date">SEP 26</div>
+				<div class="film-title"><a href="https://letterboxd.com/film/the-battle-of-algiers/" target="blank_">The Battle of Algiers (1966)</a></div>
+			</div>
+			<div class="subrow">
+				<div class="time">8:00 PM</div>
+				<div class="director">ᴅɪʀ. Gillo Pontecorvo</div>
+			</div>
+		<!--ROW 2-->
+			<div class="row">
+				<div class="date">OCT 01</div>
+				<div class="film-title"><a href="https://letterboxd.com/film/red-army-pflp-declaration-of-world-war/" target="blank_">Red Army/PFLP: Declaration of World War (1971)</a></div>
+			</div>
+			<div class="subrow">
+				<div class="time">8:00 PM</div>
+				<div class="director">ᴅɪʀ. Kōji Wakamatsu, Masao Adachi</div>
+			</div>
+		<!--ROW 3-->
+			<div class="row">
+				<div class="date">DATE ##</div>
+				<div class="film-title"><a href="">Film Title (####)</a></div>
+			</div>
+			<div class="subrow">
+				<div class="time">8:00 PM</div>
+				<div class="director">ᴅɪʀ. Director Name</div>
+			</div>
+		<!--ROW 4-->
+			<div class="row">
+				<div class="date">DATE ##</div>
+				<div class="film-title"><a href="">Film Title (####)</a></div>
+			</div>
+			<div class="subrow">
+				<div class="time">8:00 PM</div>
+				<div class="director">ᴅɪʀ. Director Name</div>
+			</div>
+		<!--ROW 5-->
+			<div class="row">
+				<div class="date">DATE ##</div>
+				<div class="film-title"><a href="">Film Title (####)</a></div>
+			</div>
+			<div class="subrow">
+				<div class="time">8:00 PM</div>
+				<div class="director">ᴅɪʀ. Director Name</div>
+			</div>
+		<!--ROW 6-->
+			<div class="row">
+				<div class="date">DATE ##</div>
+				<div class="film-title"><a href="">Film Title (####)</a></div>
+			</div>
+			<div class="subrow">
+				<div class="time">8:00 PM</div>
+				<div class="director">ᴅɪʀ. Director Name</div>
+			</div>
+			<div class="this-week">
+			<img src="algiersali.jpeg" class="insert" alt="">
+			<p><span class="small">THIS WEEK:</span> <span class="movie-title-weekly">THE BATTLE OF ALGIERS</span></p>
+		</div>
+		</div>
+</body>
 </html>
