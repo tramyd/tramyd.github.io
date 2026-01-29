@@ -1,13 +1,231 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Tramy Dong COMSBC3930 Portfolio</title>
-	</head>
-	
-	<body>
-		<div>1. SOLDERING</div>
-		<p>Task: fabricate a small sculpture by soldering 12 pins and a bent brass rod on a protoboard</p>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Barriecito&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: #f5f0e8;
+        padding: 40px 20px;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .header h2 {
+        font-size: 40px;
+      }
+
+      .header {
+        margin-bottom: 40px;
+      }
+
+      .folder-tabs {
+        display: flex;
+        gap: 5px;
+        margin-bottom: -1px;
+      }
+
+      .tab {
+        background: #b8bfc4;
+        padding: 15px 30px;
+        border-radius: 8px 8px 0 0;
+        cursor: pointer;
+        border: none;
+        font-family: inherit;
+        font-size: 16px;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      .tab:hover {
+        background: #a5adb3;
+      }
+
+      .tab.active {
+        background: #c9d1d6;
+        font-weight: bold;
+      }
+
+      .folder-body {
+        background: #c9d1d6;
+        padding: 40px;
+        border-radius: 0 8px 8px 8px;
+        min-height: 300px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-content {
+        display: none;
+      }
+
+      .project-content.active {
+        display: block;
+        animation: fadeIn 0.4s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .project-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: #2c3e50;
+      }
+
+      .project-imgs img {
+        width: 33%;
+        padding-right: 3%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 35px;
+      }
+
+      .project-reflection {
+        font-size: 16px;
+        /* line-height: 1.6; */
+        color: #34495e;
+        margin-bottom: 20px;
+      }
+
+      .project-details {
+        margin-top: 25px;
+      }
+
+      .detail-item {
+        margin-bottom: 10px;
+        color: #34495e;
+      }
+
+      .detail-label {
+        font-weight: bold;
+        display: inline-block;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Creative Embedded Systems Portfolio</h2>
+        <h3>Tramy Dong (td2748)</h3>
+        <h3>Mark Santolucito</h3>
+        <h3>COMSBC3930 Spring 2026</h3>
+      </div>
+      <div class="folder-tabs">
+        <button class="tab active" onclick="showProject('soldering')">
+          Soldering Sclupture
+        </button>
+        <button class="tab" onclick="showProject('pcb')">PCB</button>
+        <button class="tab" onclick="showProject('etc')">etc</button>
+      </div>
+
+      <div class="folder-body">
+        <!-- Soldering Sculpture -->
+        <div id="soldering" class="project-content active">
+          <h2 class="project-title">Soldering Sculpture</h2>
+          <div class="project-details">
+            <div class="detail-item">
+              <span class="detail-label">Task:</span>
+              <span
+                >fabricate a small sculpture by soldering 12 pins and a bent
+                brass rod on a protoboard</span
+              >
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Materials:</span>
+              <span>protoboard, 12 pin header, brass rod, soldering iron</span>
+            </div>
+          </div>
+          <div class="project-imgs">
+            <img src="assets/soldering_1.JPG" alt="" /><img
+              src="assets/soldering_2.JPG"
+              alt=""
+            /><img src="assets/soldering_3.jpg" alt="" />
+          </div>
+          <div class="project-reflection">
+            <p>
+              The sculpture I created by bending the brass rod with a tweezer is
+              a tree-like shape. For every assignment and skill I learn in this
+              course, I want to think of it as planting a tree and creating a
+              forest of knowledege. I visited the lab during office hours to
+              learn how to solder with the help of TAs. I became familiar with
+              the tools and practiced soldering with the 10 pin heads and 3
+              points on the sculpture.
+            </p>
+          </div>
+        </div>
+
+        <!-- PCB -->
+        <div id="pcb" class="project-content">
+          <h2 class="project-title">PCB</h2>
+          <div class="project-details">
+            <div class="detail-item">
+              <span class="detail-label">Task:</span>
+              <span>task details</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Materials:</span>
+              <span>list materials</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- etc -->
+        <div id="etc" class="project-content">
+          <h2 class="project-title">etc</h2>
+          <div class="project-details">
+            <div class="detail-item">
+              <span class="detail-label">Task:</span>
+              <span>task details</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Materials:</span>
+              <span>list materials</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showProject(projectId) {
+        // Hide all project contents
+        const allProjects = document.querySelectorAll(".project-content");
+        allProjects.forEach((project) => {
+          project.classList.remove("active");
+        });
+
+        // Remove active class from all tabs
+        const allTabs = document.querySelectorAll(".tab");
+        allTabs.forEach((tab) => {
+          tab.classList.remove("active");
+        });
+
+        // Show selected project
+        document.getElementById(projectId).classList.add("active");
+
+        // Highlight selected tab
+        event.target.classList.add("active");
+      }
+    </script>
+  </body>
 </html>
