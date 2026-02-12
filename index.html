@@ -25,7 +25,7 @@
       }
 
       .header h2 {
-        font-size: 40px;
+        font-size: 32px;
       }
 
       .header {
@@ -101,7 +101,6 @@
 
       .project-reflection {
         font-size: 16px;
-        /* line-height: 1.6; */
         color: #34495e;
         margin-bottom: 20px;
       }
@@ -135,6 +134,9 @@
           Soldering Sclupture
         </button>
         <button class="tab" onclick="showProject('pcb')">PCB</button>
+        <button class="tab" onclick="showProject('generative_art')">
+          Generative Art
+        </button>
         <button class="tab" onclick="showProject('etc')">etc</button>
       </div>
 
@@ -146,7 +148,7 @@
             <div class="detail-item">
               <span class="detail-label">Task:</span>
               <span
-                >fabricate a small sculpture by soldering 12 pins and a bent
+                >Fabricate a small sculpture by soldering 12 pins and a bent
                 brass rod on a protoboard</span
               >
             </div>
@@ -176,7 +178,42 @@
 
         <!-- PCB -->
         <div id="pcb" class="project-content">
-          <h2 class="project-title">PCB</h2>
+          <h2 class="project-title">PCB Pendant</h2>
+          <div class="project-details">
+            <div class="detail-item">
+              <span class="detail-label">Task:</span>
+              <span
+                >Design a PCB layout and mill it onto a CNC. The solder
+                components onto the board.</span
+              >
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Materials:</span>
+              <span
+                >copper board, 555 timer chip, CR2032 coin cell battery, LED,
+                ceramic capacitors, resistors</span
+              >
+            </div>
+            <div class="project-imgs">
+              <img src="assets/pcb_1.JPG" alt="" /><img
+                src="assets/pcb_2.JPG"
+                alt=""
+              /><img src="assets/pcb_3.JPG" alt="" />
+            </div>
+            <div class="project-reflection">
+              <p></p>
+              <img
+                src="assets/pcblayout.png"
+                alt=""
+                style="width: 97%; border-radius: 35px"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- generative art -->
+        <div id="generative_art" class="project-content">
+          <h2 class="project-title">Generative Art</h2>
           <div class="project-details">
             <div class="detail-item">
               <span class="detail-label">Task:</span>
@@ -208,22 +245,18 @@
 
     <script>
       function showProject(projectId) {
-        // Hide all project contents
         const allProjects = document.querySelectorAll(".project-content");
         allProjects.forEach((project) => {
           project.classList.remove("active");
         });
 
-        // Remove active class from all tabs
         const allTabs = document.querySelectorAll(".tab");
         allTabs.forEach((tab) => {
           tab.classList.remove("active");
         });
 
-        // Show selected project
         document.getElementById(projectId).classList.add("active");
 
-        // Highlight selected tab
         event.target.classList.add("active");
       }
     </script>
